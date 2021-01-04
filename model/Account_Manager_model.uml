@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_uVJ7gNfjEeqJHKucVzsUbA" name="Account_Manager_model">
+    <eAnnotations xmi:id="_ubf0ENfjEeqJHKucVzsUbA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_ubf0EdfjEeqJHKucVzsUbA" source="codegen">
+        <details xmi:id="_ubf0EtfjEeqJHKucVzsUbA" key="codegenDirectory" value="/Account_Manager/src"/>
+        <details xmi:id="_ulJfUNfjEeqJHKucVzsUbA" key="AssociatedSourceCode" value="/Account_Manager/src/model/AbstractModel.java;4247403671/1;/Account_Manager/src/model/Account.java;878230694/1;/Account_Manager/src/model/AccountList.java;954178594/1;/Account_Manager/src/model/AgentStatus.java;4053877064/1;/Account_Manager/src/model/DuplicateIDException.java;278393665/1;/Account_Manager/src/model/Model.java;88412240/1;/Account_Manager/src/model/ModelEvent.java;3860326432/1;/Account_Manager/src/model/ModelListener.java;3072963823/1;/Account_Manager/src/model/OverdrawException.java;1452434907/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_ug7GoNfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7GodfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7tsNfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7tsdfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7tstfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7ts9fjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7ttNfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_ug7ttdfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_ug8UwNfjEeqJHKucVzsUbA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ug870NfjEeqJHKucVzsUbA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_ug870dfjEeqJHKucVzsUbA" name="util">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_uh4I4NfjEeqJHKucVzsUbA" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_uh4v8dfjEeqJHKucVzsUbA" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_uiAEs9fjEeqJHKucVzsUbA" name="Scanner"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ug-J8NfjEeqJHKucVzsUbA" name="math">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_uh7MMtfjEeqJHKucVzsUbA" name="BigDecimal"/>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_uh7zQdfjEeqJHKucVzsUbA" name="RoundingMode"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ug__INfjEeqJHKucVzsUbA" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_uh-PgNfjEeqJHKucVzsUbA" name="IOException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_uh-2kdfjEeqJHKucVzsUbA" name="File"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_uh_dodfjEeqJHKucVzsUbA" name="FileNotFoundException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_uiAEsdfjEeqJHKucVzsUbA" name="FileWriter"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uiIAgNfjEeqJHKucVzsUbA" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_uiInkNfjEeqJHKucVzsUbA" name="Exception"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ug9i4NfjEeqJHKucVzsUbA" name="model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhHT4NfjEeqJHKucVzsUbA" name="AbstractModel" isAbstract="true">
+        <ownedAttribute xmi:id="_uiKcwNfjEeqJHKucVzsUbA" name="listeners" visibility="private" type="_uhUvQNfjEeqJHKucVzsUbA" isOrdered="true" association="_uiVb4NfjEeqJHKucVzsUbA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uiKcwdfjEeqJHKucVzsUbA" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_uiKcwtfjEeqJHKucVzsUbA" value="new ArrayList&lt;ModelListener>(5)"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_uh5-EdfjEeqJHKucVzsUbA" client="_uhHT4NfjEeqJHKucVzsUbA" supplier="_uhS6E9fjEeqJHKucVzsUbA" contract="_uhS6E9fjEeqJHKucVzsUbA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiOuMNfjEeqJHKucVzsUbA" name="notifyChanged" specification="_uh6lINfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiOuMdfjEeqJHKucVzsUbA" name="event" type="_uhThINfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>for(ModelListener ml : listeners)&#xD;
+			ml.modelChanged(event);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiPVQNfjEeqJHKucVzsUbA" name="addModelListener" specification="_uh6lItfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiPVQdfjEeqJHKucVzsUbA" name="l" type="_uhUvQNfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>listeners.add(l);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiPVQtfjEeqJHKucVzsUbA" name="removeModelListener" specification="_uh7MMNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiPVQ9fjEeqJHKucVzsUbA" name="l" type="_uhUvQNfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>listeners.remove(l);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_uh6lINfjEeqJHKucVzsUbA" name="notifyChanged" method="_uiOuMNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uh6lIdfjEeqJHKucVzsUbA" name="event" type="_uhThINfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uh6lItfjEeqJHKucVzsUbA" name="addModelListener" method="_uiPVQNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uh6lI9fjEeqJHKucVzsUbA" name="l" type="_uhUvQNfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uh7MMNfjEeqJHKucVzsUbA" name="removeModelListener" method="_uiPVQtfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uh7MMdfjEeqJHKucVzsUbA" name="l" type="_uhUvQNfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhJJENfjEeqJHKucVzsUbA" name="Account">
+        <generalization xmi:id="_uh9BYNfjEeqJHKucVzsUbA" general="_uhHT4NfjEeqJHKucVzsUbA"/>
+        <ownedAttribute xmi:id="_uiLD0NfjEeqJHKucVzsUbA" name="id" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_uiLq4dfjEeqJHKucVzsUbA" name="name" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_uiLq4tfjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA" isReadOnly="true"/>
+        <ownedAttribute xmi:id="_uiLq49fjEeqJHKucVzsUbA" name="DECIMALS" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_uiMR8NfjEeqJHKucVzsUbA" value="2"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_uiMR8tfjEeqJHKucVzsUbA" name="ROUNDING_MODE" visibility="private" isLeaf="true" isStatic="true" type="_uh7zQdfjEeqJHKucVzsUbA" isReadOnly="true">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_uiMR89fjEeqJHKucVzsUbA" value="RoundingMode.HALF_EVEN"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiPVRNfjEeqJHKucVzsUbA" name="Account" specification="_uhKXMNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiPVRdfjEeqJHKucVzsUbA" type="_uhJJENfjEeqJHKucVzsUbA" direction="return"/>
+          <language>java</language>
+          <body>this.id = &quot;&quot;;&#xD;
+		this.name = &quot;&quot;;&#xD;
+		this.balance = BigDecimal.ZERO;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiP8UNfjEeqJHKucVzsUbA" name="Account" specification="_uiE9MNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiP8UdfjEeqJHKucVzsUbA" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiP8UtfjEeqJHKucVzsUbA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiP8U9fjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <ownedParameter xmi:id="_uiP8VNfjEeqJHKucVzsUbA" type="_uhJJENfjEeqJHKucVzsUbA" direction="return"/>
+          <language>java</language>
+          <body>this.id = id;&#xD;
+		this.name = name;&#xD;
+		this.balance = balance;&#xD;
+		this.balance.setScale(DECIMALS, ROUNDING_MODE);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiP8VdfjEeqJHKucVzsUbA" name="getID" specification="_uhK-QNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiP8VtfjEeqJHKucVzsUbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.id; </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiP8V9fjEeqJHKucVzsUbA" name="deposit" specification="_uiFkQ9fjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiP8WNfjEeqJHKucVzsUbA" name="amount" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>balance = balance.add(amount);&#xD;
+		balance = balance.setScale(DECIMALS, ROUNDING_MODE);&#xD;
+		final ModelEvent me = new ModelEvent(balance);&#xD;
+		notifyChanged(me);&#xD;
+		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiP8WdfjEeqJHKucVzsUbA" name="withdrawal" specification="_uiGLUtfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiP8WtfjEeqJHKucVzsUbA" name="amount" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>BigDecimal newBalance = balance.add(BigDecimal.ZERO);&#xD;
+		// an exception is thrown if the withdrawal results in&#xD;
+		// the account balance being overdrawn or less than 0.&#xD;
+		newBalance = balance.subtract(amount);&#xD;
+		if(newBalance.compareTo(BigDecimal.ZERO) &lt; 0)&#xD;
+			throw new OverdrawException();&#xD;
+		balance = newBalance;&#xD;
+		balance = balance.setScale(DECIMALS, ROUNDING_MODE);&#xD;
+		final ModelEvent me = new ModelEvent(balance);&#xD;
+		notifyChanged(me);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_uhKXMNfjEeqJHKucVzsUbA" name="Account" method="_uiPVRNfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uhKXMdfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhKXMtfjEeqJHKucVzsUbA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uhKXM9fjEeqJHKucVzsUbA" type="_uhJJENfjEeqJHKucVzsUbA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhK-QNfjEeqJHKucVzsUbA" name="getID" method="_uiP8VdfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uhK-QdfjEeqJHKucVzsUbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uiE9MNfjEeqJHKucVzsUbA" name="Account" method="_uiP8UNfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiFkQNfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiFkQdfjEeqJHKucVzsUbA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiE9MdfjEeqJHKucVzsUbA" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiE9MtfjEeqJHKucVzsUbA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiE9M9fjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <ownedParameter xmi:id="_uiFkQtfjEeqJHKucVzsUbA" type="_uhJJENfjEeqJHKucVzsUbA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uiFkQ9fjEeqJHKucVzsUbA" name="deposit" method="_uiP8V9fjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiGLUNfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiGLUdfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiFkRNfjEeqJHKucVzsUbA" name="amount" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uiGLUtfjEeqJHKucVzsUbA" name="withdrawal" method="_uiP8WdfjEeqJHKucVzsUbA" raisedException="_uhUvQdfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiGLVNfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiGLVdfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiGLU9fjEeqJHKucVzsUbA" name="amount" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhMMYNfjEeqJHKucVzsUbA" name="AccountList">
+        <generalization xmi:id="_uiB54NfjEeqJHKucVzsUbA" general="_uhJJENfjEeqJHKucVzsUbA"/>
+        <ownedAttribute xmi:id="_uiM5AdfjEeqJHKucVzsUbA" name="accountList" visibility="package" type="_uhJJENfjEeqJHKucVzsUbA" isOrdered="true" association="_uiWC8dfjEeqJHKucVzsUbA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uiNgENfjEeqJHKucVzsUbA" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_uiNgEdfjEeqJHKucVzsUbA" value="new ArrayList&lt;Account>()"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiQjYNfjEeqJHKucVzsUbA" name="addAccount" specification="_uiHZcNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiQjYdfjEeqJHKucVzsUbA" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiQjYtfjEeqJHKucVzsUbA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiQjY9fjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>Account newAccount = new Account(id, name, balance);&#xD;
+		int newAcctIndex = 0;		// index tracker&#xD;
+		boolean isValidID = true;	// isValidID flag&#xD;
+		for(Account acct : accountList)&#xD;
+		{&#xD;
+//			System.out.println(String.format(&quot;comparing index &quot; + newAcctIndex + &quot; containing ID &quot; + acct.getID() + &quot; with new ID &quot; + id));&#xD;
+			if(id.compareTo(acct.getID()) == 0)&#xD;
+			{&#xD;
+				isValidID = false;&#xD;
+				// if id == acct.getID(), we have a Duplicate ID Exception.&#xD;
+				throw new DuplicateIDException();&#xD;
+			}&#xD;
+			else if(id.compareTo(acct.getID()) &lt; 0)&#xD;
+				break;&#xD;
+				// if id == accountList(i).getID(), then throw new DuplicateIDException&#xD;
+			&#xD;
+			// if id is less than current iteration of id in accountList, we keep going.&#xD;
+			newAcctIndex++;		// current iteration index in accountList&#xD;
+		}&#xD;
+		if(isValidID)&#xD;
+			// this is where we insert the newAccount at newAcctIndex.&#xD;
+			accountList.add(newAcctIndex, newAccount);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiQjZNfjEeqJHKucVzsUbA" name="addAccount" specification="_uiArwdfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiQjZdfjEeqJHKucVzsUbA" name="newAccount" type="_uhJJENfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>int newAcctIndex = 0;		// index tracker&#xD;
+		boolean isValidID = true;	// isValidID flag&#xD;
+		for(Account acct : accountList)&#xD;
+		{&#xD;
+			newAcctIndex++;		// current iteration index in accountList&#xD;
+//			System.out.println(String.format(&quot;comparing index &quot; + newAcctIndex + &quot; containing ID &quot; + acct.getID() + &quot; with new ID &quot; + newAccount.getID()));&#xD;
+&#xD;
+			if(newAccount.getID().compareTo(acct.getID()) == 0)&#xD;
+			{&#xD;
+				isValidID = false;&#xD;
+				// if id == acct.getID(), we have a Duplicate ID Exception.&#xD;
+				throw new DuplicateIDException();&#xD;
+			}&#xD;
+			else if(newAccount.getID().compareTo(acct.getID()) &lt; 0)&#xD;
+				break;&#xD;
+			&#xD;
+			// if id is less than current iteration of id in accountList, we keep going.&#xD;
+		}&#xD;
+		if(isValidID)&#xD;
+			// this is where we insert the newAccount at newAcctIndex.&#xD;
+			accountList.add(newAcctIndex, newAccount);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiQjZtfjEeqJHKucVzsUbA" name="getListNumberOfAccounts" specification="_uhOBkdfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiQjZ9fjEeqJHKucVzsUbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return accountList.size();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiRKcNfjEeqJHKucVzsUbA" name="getListNames" specification="_uhOBk9fjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiRKcdfjEeqJHKucVzsUbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uiRKctfjEeqJHKucVzsUbA" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>String[] names = new String[getListNumberOfAccounts()];&#xD;
+		int i = 0;&#xD;
+		for(Account acct : accountList)&#xD;
+		{&#xD;
+			names[i] = acct.getName();&#xD;
+			i++;&#xD;
+		}&#xD;
+		return names;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiRxgNfjEeqJHKucVzsUbA" name="removeAccount" specification="_uhOoo9fjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiRxgdfjEeqJHKucVzsUbA" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>for(Account acct : accountList)&#xD;
+		{&#xD;
+			if(id.compareTo(acct.getID()) == 0)&#xD;
+			{&#xD;
+				// remove acct.&#xD;
+				accountList.remove(acct);&#xD;
+				break;&#xD;
+			}&#xD;
+		}&#xD;
+		// if the list has been traversed and there is no account&#xD;
+		// in accountList that does not match id,&#xD;
+		// then the account DNE and nothing happens.&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiRxgtfjEeqJHKucVzsUbA" name="removeAccount" specification="_uiBS0tfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiRxg9fjEeqJHKucVzsUbA" name="remove" type="_uhJJENfjEeqJHKucVzsUbA"/>
+          <language>java</language>
+          <body>for(Account acct : accountList)&#xD;
+		{&#xD;
+			if(remove.getID().compareTo(acct.getID()) == 0)&#xD;
+			{&#xD;
+				// remove acct.&#xD;
+				accountList.remove(acct);&#xD;
+				break;&#xD;
+			}&#xD;
+		}&#xD;
+		// if the list has been traversed and there is no account&#xD;
+		// in accountList that does not match remove.getID(),&#xD;
+		// then the account DNE and nothing happens.&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiRxhNfjEeqJHKucVzsUbA" name="saveAccountList" specification="_uhPPstfjEeqJHKucVzsUbA">
+          <language>java</language>
+          <body>String accountsFile = &quot;ListOfAccounts.txt&quot;;&#xD;
+		try(FileWriter outFile = new FileWriter(accountsFile))&#xD;
+		{&#xD;
+			for(Account acct : accountList)&#xD;
+			{&#xD;
+				outFile.write(String.format(&quot;%-25s %-8s %s&quot;, acct.getName(), acct.getID(), acct.getBalance() + &quot;\n&quot;));&#xD;
+			}&#xD;
+			outFile.close();&#xD;
+		}&#xD;
+		catch(IOException ex)&#xD;
+		{&#xD;
+			System.out.println(ex.getMessage());&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiRxhdfjEeqJHKucVzsUbA" name="loadAccountList" specification="_uhPPtdfjEeqJHKucVzsUbA">
+          <language>java</language>
+          <body>String accountsFile = &quot;ListOfAccounts.txt&quot;;&#xD;
+		File file;&#xD;
+		file = new File(accountsFile);&#xD;
+		try(Scanner inFile = new Scanner(file))&#xD;
+		{&#xD;
+			while(inFile.hasNext())&#xD;
+			{&#xD;
+				String id = &quot;&quot;;&#xD;
+				String b = &quot;0.00&quot;;&#xD;
+				String name = &quot;&quot;;&#xD;
+				if(inFile.hasNext())&#xD;
+					name = inFile.next();&#xD;
+				if(inFile.hasNext())&#xD;
+					name += &quot; &quot; + inFile.next();&#xD;
+				if(inFile.hasNext())&#xD;
+					id = inFile.next();&#xD;
+				if(inFile.hasNext())&#xD;
+					b = inFile.next();&#xD;
+				BigDecimal balance = new BigDecimal(b);&#xD;
+				accountList.add(new Account(id, name, balance));&#xD;
+			}&#xD;
+			inFile.close();&#xD;
+		}&#xD;
+		catch(FileNotFoundException ex)&#xD;
+		{&#xD;
+			System.out.println(&quot;File Read Error: File &quot; + accountsFile + &quot; does not exist!&quot;);&#xD;
+			System.out.println(ex.getMessage());&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiRxhtfjEeqJHKucVzsUbA" name="printList" specification="_uhP2wNfjEeqJHKucVzsUbA">
+          <language>java</language>
+          <body>System.out.println(String.format(&quot;\n%-20s: %-6s: %s&quot;, &quot;Name&quot;, &quot;ID&quot;, &quot;Balance&quot;));&#xD;
+		for(Account acct : accountList)&#xD;
+		{&#xD;
+			System.out.println(String.format(&quot;%-20s: %-6s: $ %s&quot;, acct.getName(), acct.getID(), acct.getBalance()));&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_uhNagNfjEeqJHKucVzsUbA" name="AccountList">
+          <eAnnotations xmi:id="_uhNagdfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhNagtfjEeqJHKucVzsUbA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uhOBkNfjEeqJHKucVzsUbA" type="_uhMMYNfjEeqJHKucVzsUbA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhOBkdfjEeqJHKucVzsUbA" name="getListNumberOfAccounts" method="_uiQjZtfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uhOBktfjEeqJHKucVzsUbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhOBk9fjEeqJHKucVzsUbA" name="getListNames" method="_uiRKcNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uhOooNfjEeqJHKucVzsUbA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uhOoodfjEeqJHKucVzsUbA" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhOoo9fjEeqJHKucVzsUbA" name="removeAccount" method="_uiRxgNfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uhPPsNfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhPPsdfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uhOopNfjEeqJHKucVzsUbA" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhPPstfjEeqJHKucVzsUbA" name="saveAccountList" method="_uiRxhNfjEeqJHKucVzsUbA" raisedException="_uh-PgNfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uhPPs9fjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhPPtNfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhPPtdfjEeqJHKucVzsUbA" name="loadAccountList" method="_uiRxhdfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uhPPttfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhPPt9fjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uhP2wNfjEeqJHKucVzsUbA" name="printList" method="_uiRxhtfjEeqJHKucVzsUbA"/>
+        <ownedOperation xmi:id="_uiArwdfjEeqJHKucVzsUbA" name="addAccount" method="_uiQjZNfjEeqJHKucVzsUbA" raisedException="_uhSTAtfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiBS0NfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiBS0dfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiArwtfjEeqJHKucVzsUbA" name="newAccount" type="_uhJJENfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uiBS0tfjEeqJHKucVzsUbA" name="removeAccount" method="_uiRxgtfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiBS1NfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiBS1dfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiBS09fjEeqJHKucVzsUbA" name="remove" type="_uhJJENfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_uiHZcNfjEeqJHKucVzsUbA" name="addAccount" method="_uiQjYNfjEeqJHKucVzsUbA" raisedException="_uhSTAtfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiHZdNfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiHZddfjEeqJHKucVzsUbA" key="synchronized"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiHZcdfjEeqJHKucVzsUbA" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiHZctfjEeqJHKucVzsUbA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uiHZc9fjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_uhRE4NfjEeqJHKucVzsUbA" name="AgentStatus">
+        <ownedLiteral xmi:id="_uhRr8dfjEeqJHKucVzsUbA" name="Running"/>
+        <ownedLiteral xmi:id="_uhRr8tfjEeqJHKucVzsUbA" name="Blocked"/>
+        <ownedLiteral xmi:id="_uhSTANfjEeqJHKucVzsUbA" name="Paused"/>
+        <ownedLiteral xmi:id="_uhSTAdfjEeqJHKucVzsUbA" name="NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhSTAtfjEeqJHKucVzsUbA" name="DuplicateIDException">
+        <generalization xmi:id="_uiInktfjEeqJHKucVzsUbA" general="_uiInkNfjEeqJHKucVzsUbA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiSYkNfjEeqJHKucVzsUbA" name="DuplicateIDException" specification="_uhSTA9fjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiSYkdfjEeqJHKucVzsUbA" type="_uhSTAtfjEeqJHKucVzsUbA" direction="return"/>
+          <language>java</language>
+          <body>super(&quot;Duplicate ID Exception: ID entered for a new account already exists in the account list.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_uhSTA9fjEeqJHKucVzsUbA" name="DuplicateIDException" method="_uiSYkNfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uhS6ENfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhS6EdfjEeqJHKucVzsUbA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uhS6EtfjEeqJHKucVzsUbA" type="_uhSTAtfjEeqJHKucVzsUbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_uhS6E9fjEeqJHKucVzsUbA" name="Model">
+        <ownedOperation xmi:id="_uiCg8NfjEeqJHKucVzsUbA" name="notifyChanged">
+          <ownedParameter xmi:id="_uiCg8dfjEeqJHKucVzsUbA" name="me" type="_uhThINfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhThINfjEeqJHKucVzsUbA" name="ModelEvent">
+        <ownedAttribute xmi:id="_uiOHINfjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA" isReadOnly="true"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiSYktfjEeqJHKucVzsUbA" name="ModelEvent" specification="_uiJOoNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiSYk9fjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <ownedParameter xmi:id="_uiSYlNfjEeqJHKucVzsUbA" type="_uhThINfjEeqJHKucVzsUbA" direction="return"/>
+          <language>java</language>
+          <body>this.balance = balance;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_uiJOoNfjEeqJHKucVzsUbA" name="ModelEvent" method="_uiSYktfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uiJOotfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uiJOo9fjEeqJHKucVzsUbA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uiJOodfjEeqJHKucVzsUbA" name="balance" type="_uh7MMtfjEeqJHKucVzsUbA"/>
+          <ownedParameter xmi:id="_uiJOpNfjEeqJHKucVzsUbA" type="_uhThINfjEeqJHKucVzsUbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_uhUvQNfjEeqJHKucVzsUbA" name="ModelListener">
+        <ownedOperation xmi:id="_uiDIANfjEeqJHKucVzsUbA" name="modelChanged">
+          <ownedParameter xmi:id="_uiDIAdfjEeqJHKucVzsUbA" name="me" type="_uhThINfjEeqJHKucVzsUbA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhUvQdfjEeqJHKucVzsUbA" name="OverdrawException">
+        <generalization xmi:id="_uiJ1sNfjEeqJHKucVzsUbA" general="_uiInkNfjEeqJHKucVzsUbA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_uiS_oNfjEeqJHKucVzsUbA" name="OverdrawException" specification="_uhVWUNfjEeqJHKucVzsUbA">
+          <ownedParameter xmi:id="_uiS_odfjEeqJHKucVzsUbA" type="_uhUvQdfjEeqJHKucVzsUbA" direction="return"/>
+          <language>java</language>
+          <body>super(&quot;Account Overdrawn Exception: Amount being removed from balance results in overdrawal of the account.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_uhVWUNfjEeqJHKucVzsUbA" name="OverdrawException" method="_uiS_oNfjEeqJHKucVzsUbA">
+          <eAnnotations xmi:id="_uhVWUdfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_uhVWUtfjEeqJHKucVzsUbA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_uhVWU9fjEeqJHKucVzsUbA" type="_uhUvQdfjEeqJHKucVzsUbA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_uiVb4NfjEeqJHKucVzsUbA" name="" memberEnd="_uiVb4dfjEeqJHKucVzsUbA _uiKcwNfjEeqJHKucVzsUbA">
+        <ownedEnd xmi:id="_uiVb4dfjEeqJHKucVzsUbA" name="" type="_uhHT4NfjEeqJHKucVzsUbA" association="_uiVb4NfjEeqJHKucVzsUbA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_uiWC8dfjEeqJHKucVzsUbA" name="" memberEnd="_uiWC8tfjEeqJHKucVzsUbA _uiM5AdfjEeqJHKucVzsUbA">
+        <ownedEnd xmi:id="_uiWC8tfjEeqJHKucVzsUbA" name="" type="_uhMMYNfjEeqJHKucVzsUbA" association="_uiWC8dfjEeqJHKucVzsUbA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ug-J8dfjEeqJHKucVzsUbA" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_ug-J8tfjEeqJHKucVzsUbA" name="swing">
+        <packagedElement xmi:type="uml:Class" xmi:id="_uh8aUNfjEeqJHKucVzsUbA" name="SwingUtilities"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_ubgbINfjEeqJHKucVzsUbA">
+      <eAnnotations xmi:id="_ubgbIdfjEeqJHKucVzsUbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_ubgbItfjEeqJHKucVzsUbA" base_Package="_uVJ7gNfjEeqJHKucVzsUbA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uhNag9fjEeqJHKucVzsUbA" base_Element="_uhNagNfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Array xmi:id="_uhOootfjEeqJHKucVzsUbA" base_Element="_uhOBk9fjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uhRr8NfjEeqJHKucVzsUbA" base_Element="_uhRE4NfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh4v8NfjEeqJHKucVzsUbA" base_Element="_uh4I4NfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh5-ENfjEeqJHKucVzsUbA" base_Element="_uh4v8dfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh7zQNfjEeqJHKucVzsUbA" base_Element="_uh7MMtfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh7zQtfjEeqJHKucVzsUbA" base_Element="_uh7zQdfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh8aUdfjEeqJHKucVzsUbA" base_Element="_uh8aUNfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh-2kNfjEeqJHKucVzsUbA" base_Element="_uh-PgNfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uh_doNfjEeqJHKucVzsUbA" base_Element="_uh-2kdfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uiAEsNfjEeqJHKucVzsUbA" base_Element="_uh_dodfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uiAEstfjEeqJHKucVzsUbA" base_Element="_uiAEsdfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uiArwNfjEeqJHKucVzsUbA" base_Element="_uiAEs9fjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uiInkdfjEeqJHKucVzsUbA" base_Element="_uiInkNfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uiKcw9fjEeqJHKucVzsUbA" base_Element="_uiKcwNfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uiLq4NfjEeqJHKucVzsUbA" base_Element="_uiLD0NfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uiMR8dfjEeqJHKucVzsUbA" base_Element="_uiLq49fjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uiM5ANfjEeqJHKucVzsUbA" base_Element="_uiMR8tfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uiNgEtfjEeqJHKucVzsUbA" base_Element="_uiM5AdfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uiWC8NfjEeqJHKucVzsUbA" base_Element="_uiVb4NfjEeqJHKucVzsUbA"/>
+  <UMLLabProfile:Reference xmi:id="_uiWqANfjEeqJHKucVzsUbA" base_Element="_uiWC8dfjEeqJHKucVzsUbA"/>
+</xmi:XMI>
