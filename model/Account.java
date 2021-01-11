@@ -75,6 +75,7 @@ public class Account extends AbstractModel
 		balance = balance.setScale(DECIMALS, ROUNDING_MODE);
 		final ModelEvent me = new ModelEvent(balance);
 		notifyChanged(me);
+		// we will need to update AccountSelectionView simultaneously?
 	}
 	
 	public synchronized void withdraw(BigDecimal amount) throws OverdrawException
@@ -89,5 +90,16 @@ public class Account extends AbstractModel
 		balance = balance.setScale(DECIMALS, ROUNDING_MODE);
 		final ModelEvent me = new ModelEvent(balance);
 		notifyChanged(me);
+		// we will need to update AccountSelectionView simultaneously?
+	}
+	
+	public static RoundingMode getRoundingMode()
+	{
+		return ROUNDING_MODE;
+	}
+	
+	public static int getDecimals()
+	{
+		return DECIMALS;
 	}
 }

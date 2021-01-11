@@ -38,12 +38,10 @@ public class AccountList extends AbstractModel
 	// add account to the accountList using id, name, and balance as parameters
 	public synchronized void addAccount(String id, String last, String first, BigDecimal balance) throws DuplicateIDException
 	{
-		Account newAccount = new Account(id, last, first, balance);
 		int newAcctIndex = 0;		// index tracker
 		boolean isValidID = true;	// isValidID flag
 		
 		// adjust search to something more efficient
-		
 		for(Account acct : accountList)
 		{
 			if(id.compareTo(acct.getID()) == 0)
@@ -53,18 +51,18 @@ public class AccountList extends AbstractModel
 				throw new DuplicateIDException();
 			}
 			else if(id.compareTo(acct.getID()) < 0)
-			{
-				newAcctIndex = accountList.indexOf(acct);
 				break;
-			}
+
 			// if id == accountList(i).getID(), then throw new DuplicateIDException			
 			// if id is less than current iteration of id in accountList, we keep going.
+			newAcctIndex++;
 		}
+
 		if(isValidID)
 		{
 			// this is where we insert the newAccount at newAcctIndex.
-			accountList.add(newAcctIndex, newAccount);
-			currentAccount = newAccount;
+			accountList.add(newAcctIndex, new Account(id, last, first, balance));
+			currentAccount = accountList.get(newAcctIndex);
 		}
 	}
 	
@@ -86,11 +84,9 @@ public class AccountList extends AbstractModel
 				throw new DuplicateIDException();
 			}
 			else if(newAccount.getID().compareTo(acct.getID()) < 0)
-			{
-				newAcctIndex = accountList.indexOf(acct);
 				break;
-			}
 			// if id is less than current iteration of id in accountList, we keep going.
+			newAcctIndex++;
 		}
 		if(isValidID)
 		{
@@ -98,7 +94,6 @@ public class AccountList extends AbstractModel
 			accountList.add(newAcctIndex, newAccount);
 			currentAccount = newAccount;
 		}
-		
 	}	
 	
 	public int getListNumberOfAccounts()
@@ -119,7 +114,7 @@ public class AccountList extends AbstractModel
 	}
 	
 	// remove an account from the accountList using an id of an account as a parameter
-	public synchronized int removeAccount(String id)
+	public synchronized void removeAccount(String id)
 	{
 		int index = -1;
 		for(Account acct : accountList)
@@ -132,15 +127,10 @@ public class AccountList extends AbstractModel
 				break;
 			}
 		}
-		// if the list has been traversed and there is no account
-		// in accountList that does not match id,
-		// then the account DNE and nothing happens to accountList.
-		// -1 will be returned to handle the DNE error on the GUI side.
-		return index;
 	}
 		
 	// remove an account from the accountList using an Account object as a parameter
-	public synchronized int removeAccount(Account remove)
+	public synchronized void removeAccount(Account remove)
 	{
 		int index = -1;
 		for(Account acct : accountList)
@@ -153,13 +143,9 @@ public class AccountList extends AbstractModel
 				break;
 			}
 		}
-		// if the list has been traversed and there is no account
-		// in accountList that does not match id,
-		// then the account DNE and nothing happens to accountList.
-		// -1 will be returned to handle the DNE error on the GUI side.
-		return index;
 	}		
 	
+	// function used to determine if an account exists.
 	public boolean doesAccountExist(String id)
 	{
 		boolean exists = false;
@@ -171,9 +157,23 @@ public class AccountList extends AbstractModel
 				exists = true;
 				break;
 			}
-		}
-		
+		}		
 		return exists;
+	}
+	
+	// function to return the index of an account ID.
+	public int getAccountIndex(String id)
+	{
+		int i = 0;
+		for(Account acct : accountList)
+		{
+			if(id.compareTo(acct.getID()) == 0)
+			{
+				i = accountList.indexOf(acct);
+				break;
+			}
+		}
+		return i;
 	}
 	
 	// saves the accountList to file
@@ -248,7 +248,8 @@ public class AccountList extends AbstractModel
 	public String getCurrentAccountNameLast() { return currentAccount.getNameLast(); }
 	public String getCurrentAccountNameFirst() { return currentAccount.getNameFirst(); }
 	public BigDecimal getCurrentAccountBalance() { return currentAccount.getBalance(); }
-	
+	// get the display name for the dropdown list.
+
 	// get the display name for the dropdown list.
 	public String getCurrentAccountDisplayName() 
 	{ 
@@ -257,8 +258,6 @@ public class AccountList extends AbstractModel
 	
 	public void exit()
 	{
-//		AgentImpl.shutdownAndAwaitTermination();
-		System.err.println("Thread pool has shut down");
 		try {
 			saveAccountList();
 		} catch (IOException e) {
