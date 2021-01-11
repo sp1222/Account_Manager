@@ -1,8 +1,5 @@
-
-
 package controller;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import model.Account;
 import model.OverdrawException;
 import view.AccountView;
@@ -13,33 +10,28 @@ import view.JFrameView;
 
 
 public class AccountController extends AbstractController 
-{	
-	private final static int DECIMALS = 2;
-	private final static RoundingMode ROUNDING_MODE = RoundingMode.HALF_EVEN;
-	private final BigDecimal amountDefault = new BigDecimal("20.00");	
-	private final static String Deposit = "Deposit";
-	private final static String Withdrawal = "Withdrawal";
-	
-	public AccountController(Account account)
+{	private AccountListController controller = null;
+	public AccountController(Account account, AccountListController con)
 	{
+		controller = con;
 		setModel(account);
 		setView(new AccountView((Account)getModel(), this));
 		((JFrameView)getView()).setVisible(true);
+		((AccountView)getView()).displayCurrentAccountInformation(((Account)getModel()).getID(), ((Account)getModel()).getNameLast(), ((Account)getModel()).getNameFirst(), ((Account)getModel()).getBalance());
 	}
 
 	// IT WOULD BE EASY TO WRITE A TEST CASE HERE
 	public void operation(String option)
 	{
 		// this method of comparison does address comparison
-		if(option.equals(Deposit))	// option.equals(Deposit) method will compare Strings symbol by symbol
-		{	
-			amountDefault.setScale(DECIMALS, ROUNDING_MODE);			
+		if(option.equals(AccountView.Deposit))	// option.equals(Deposit) method will compare Strings symbol by symbol
+		{				
 			BigDecimal amount = ((AccountView)getView()).getTransactionAmount();
 			((Account)getModel()).deposit(amount);
 		}
-		else if(option.equals(Withdrawal))
+		
+		else if(option.equals(AccountView.Withdrawal))
 		{
-			amountDefault.setScale(DECIMALS, ROUNDING_MODE);
 			BigDecimal amount = ((AccountView)getView()).getTransactionAmount();
 			try
 			{
@@ -48,9 +40,15 @@ public class AccountController extends AbstractController
 			catch(OverdrawException ex)
 			{
 				final String msg = ex.getMessage();
-				((AccountView)getView()).showError(msg);
-				System.out.println("Account Overdrawn Exception: Amount being removed from balance results in overdrawal of the account.");
+				((AccountView)getView()).showError("Account Overdrawn Exception:\nAmount being removed from balance results in overdrawal of the account.");
 			}
+		}
+		
+		else if(option.equals(AccountView.Update))
+		{
+			// here we ask the AccountListController to update the AccountSelectionView details.
+			// this only occurs at closing of the AccountView window.
+			controller.operation(AccountView.Update);
 		}
 	}
 }
