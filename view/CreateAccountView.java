@@ -21,13 +21,14 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
 import controller.AccountListController;
+import controller.CreateAccountController;
 import model.AccountList;
+import model.Model;
 import model.ModelEvent;
 
 public class CreateAccountView extends JFrameView {
 
 	public final static String FinalizeNewAccount = "Finalize New Account";
-	public final static String TerminateProcess = "Terminate Process";
 	
 	private JPanel createAccountPanel;
 	private JPanel textPanel;
@@ -39,10 +40,10 @@ public class CreateAccountView extends JFrameView {
 	private JTextPane nameFirstPane;
 	private JPanel buttonPanel;
 	private JButton finalizeAccountButton;
-	private JButton terminateProcessButton;
+//	private JButton terminateProcessButton;
 	private ButtonHandler buttonHandler = new ButtonHandler();
 	
-	public CreateAccountView(AccountList model, AccountListController controller)
+	public CreateAccountView(Model model, CreateAccountController controller)
 	{
 		super(model, controller);
 		
@@ -50,6 +51,7 @@ public class CreateAccountView extends JFrameView {
 		{
 		    public void windowClosing(java.awt.event.WindowEvent evt)
 		    {
+				// update the AccountSelectionView dropdown menu through AccountListController.
 		        dispose();
 		    }
 		});
@@ -248,7 +250,7 @@ public class CreateAccountView extends JFrameView {
 			buttonPanel = new JPanel();
 			buttonPanel.setLayout(new GridBagLayout());
 			buttonPanel.add(getAddAccountButton(), addAcctButtonSet);
-			buttonPanel.add(getRemoveAccountButton(), removeAcctButtonSet);
+//			buttonPanel.add(getRemoveAccountButton(), removeAcctButtonSet);
 		}
 		return buttonPanel;
 	}
@@ -264,6 +266,7 @@ public class CreateAccountView extends JFrameView {
 		return finalizeAccountButton;
 	}
 
+	/*
 	// set up the parameters for JButton being used
 	private JButton getRemoveAccountButton()
 	{
@@ -273,7 +276,8 @@ public class CreateAccountView extends JFrameView {
 			terminateProcessButton.addActionListener(buttonHandler);
 		}
 		return terminateProcessButton;
-	}	
+	}
+	*/	
 	
 	//******************************************************************************************
 	
@@ -282,7 +286,7 @@ public class CreateAccountView extends JFrameView {
 	{
 		public void actionPerformed(ActionEvent event)
 		{
-			((AccountListController)getController()).operation(event.getActionCommand());
+			((CreateAccountController)getController()).operation(event.getActionCommand());
 		}
 	}
 	
@@ -292,7 +296,6 @@ public class CreateAccountView extends JFrameView {
 	
 	public String getID()
 	{	
-		System.out.println(idPane.getText());
 		return idPane.getText();
 	}
 	

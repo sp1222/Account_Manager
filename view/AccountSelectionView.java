@@ -49,6 +49,7 @@ public class AccountSelectionView extends JFrameView{
 	private ButtonHandler buttonHandler = new ButtonHandler();
 	private AccountListHandler accountListHandler = new AccountListHandler();
 	
+	
 	public AccountSelectionView(AccountList model, AccountListController controller)
 	{
 		super(model, controller);
@@ -62,8 +63,7 @@ public class AccountSelectionView extends JFrameView{
 		    }
 		});
 		
-		setTitle("Account Group Overview");
-		
+		setTitle("Account Group Overview");		
 		setContentPane(getMainPanel());
 		setLocation(400, 300);
 		pack();
@@ -87,6 +87,7 @@ public class AccountSelectionView extends JFrameView{
 			GridBagConstraints dropdown = new GridBagConstraints();
 			dropdown.gridx = 1;
 			labels.gridy = 0;
+			
 			accountGroupPanel.add(getTextPanel(), labels);
 			accountGroupPanel.add(getButtonPanel(), buttons);
 			accountGroupPanel.add(getDropdownPanel(), dropdown);
@@ -158,6 +159,7 @@ public class AccountSelectionView extends JFrameView{
 		if(idPane == null)
 		{
 			idPane = new JTextPane();
+			idPane.setBackground(Color.lightGray);
 			StyledDocument doc = idPane.getStyledDocument();
 			SimpleAttributeSet right = new SimpleAttributeSet();
 			StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);    
@@ -194,6 +196,7 @@ public class AccountSelectionView extends JFrameView{
 		if(nameLastPane == null)
 		{
 			nameLastPane = new JTextPane();
+			nameLastPane.setBackground(Color.lightGray);
 			StyledDocument doc = nameLastPane.getStyledDocument();
 			SimpleAttributeSet right = new SimpleAttributeSet();
 			StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);    
@@ -230,6 +233,7 @@ public class AccountSelectionView extends JFrameView{
 		if(nameFirstPane == null)
 		{
 			nameFirstPane = new JTextPane();
+			nameFirstPane.setBackground(Color.lightGray);
 			StyledDocument doc = nameFirstPane.getStyledDocument();
 			SimpleAttributeSet right = new SimpleAttributeSet();
 			StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);    
@@ -266,6 +270,7 @@ public class AccountSelectionView extends JFrameView{
 		if(balancePane == null)
 		{
 			balancePane = new JTextPane();
+			balancePane.setBackground(Color.lightGray);
 			StyledDocument doc = balancePane.getStyledDocument();
 			SimpleAttributeSet right = new SimpleAttributeSet();
 			StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);    
@@ -406,6 +411,10 @@ public class AccountSelectionView extends JFrameView{
 		balancePane.setText("$ " + balance.toString());
 	}
 
+	public void setAccountSelected(int index)
+	{
+		accountListComboBox.setSelectedIndex(index);
+	}
 	//**************************************************************************************
 	// public functions to return the amounts in the fields for creating a new account
 
