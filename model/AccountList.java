@@ -107,7 +107,7 @@ public class AccountList extends AbstractModel
 		int i = 0;
 		for(Account acct : accountList)
 		{
-			names[i] = acct.getNameLast() + ", " + acct.getNameFirst();
+			names[i] = acct.getID() + "  " + acct.getNameLast() + ", " + acct.getNameFirst();
 			i++;
 		}
 		return names;
@@ -253,7 +253,7 @@ public class AccountList extends AbstractModel
 	// get the display name for the dropdown list.
 	public String getCurrentAccountDisplayName() 
 	{ 
-		return currentAccount.getNameLast() + ", " + currentAccount.getNameFirst();
+		return currentAccount.getID() + "  " + currentAccount.getNameLast() + ", " + currentAccount.getNameFirst();
 	}
 	
 	public void exit()
