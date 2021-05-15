@@ -1,4 +1,3 @@
-Polozoff             Stephen              0020     500.00
 World                Hello                0101     12.98
 Wayne                Bruce                0102     19.86
 Last                 First                0985     876
