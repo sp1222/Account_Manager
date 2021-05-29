@@ -2,6 +2,5 @@ World                Hello                0101     12.98
 Wayne                Bruce                0102     19.86
 Last                 First                0985     876
 Polo                 Marco                2250     1000.00
-depountis            vicki                4567     58000.00
 Beta                 Alpha                7890     55.55
 qwerty               asdf                 8888     543
